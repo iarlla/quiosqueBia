@@ -1,0 +1,159 @@
+/*Estilo geral*/
+*{
+    margin: 0;
+}
+/*Cor identificar o elemento CORPO*/
+body{
+    width: 100%;
+    height: 100vh;
+    /*background-image: linear-gradient(#456251, transparent);
+    background-image: url(coffee-break.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+a{
+    text-decoration: none;
+}
+
+/*----------------Estilo para o CABEÇALHO----------------*/
+header {
+    width: 100%;/* Define a largura como 100%*/
+    height: 100vh;/* Define a altura como 80%*/
+
+    /* Define a imagem de fundo como "coffee-break.jpg" */
+    background-image: url(coffee-break.jpg);
+    
+    /* Evita que a imagem de fundo se repita */
+    background-repeat: no-repeat;
+    
+    /* Faz a imagem de fundo cobrir todo o elemento */
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+/* Estilo para a navegação */
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: end;
+    align-items:center;
+    flex-direction: column;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1;/*padding arrumou as letras no meio*/
+}
+/*.menu{}*/
+.menu:hover{/*para mudar a cor na area clicavel e dar cor quando passar o mouse*/
+    border:2px solid wheat;
+    font-size: 100%;
+}
+/*li{}*/
+
+.logo{
+    width: 100%;
+    height: 25vh;
+    font-size: 200%;
+    display: flex;
+    text-align: center;
+    justify-content: center;    
+} 
+/*#tela-inicial{}*/
+/*#tela-inicial:hover{}*/
+
+.welcome{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+/*----------------Estilo para todos principal---------------- */
+/*main {}*/
+/*section id="brunch"*/
+.brunch{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+.img-brunch{
+    width: 50%;
+    height: 100vh;
+}
+.text-brunch{
+    width: 50%;
+    height: 100vh;
+}
+/*.h1-brunch{}*/
+/*.p-brunch{}*/
+#manha{
+    justify-content: flex-start;
+}
+#meioDia{
+    justify-content: flex-end;
+}
+#tarde{
+    justify-content: flex-start;
+
+}
+#noite{
+    justify-content: flex-end;
+}
+
+/*----------------Estilo para a seção adicional----------------*/
+aside {
+    width: 100%;
+    height: 50vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; /*topo centro end*/
+    text-align: center;
+}
+/*#horario{}
+#horarioF > h2{}
+#horarioF > p{}*/
+
+#contato{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; /*topo centro end*/
+    text-align: center;
+    flex-direction: column;
+}
+
+#localizacao > a{
+    color: wheat;
+}
+/*#text-localiz{}
+#img-localiz{}*/
+
+/*----------------Estilo para o rodapé----------------*/
+footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+#copy{
+    width: 50%;
+    justify-content: flex-end;
+}
+#redes{
+    width: 50%;
+    justify-content: space-between;
+    gap: 50%;
+}
