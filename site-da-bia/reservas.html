@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Configuração da codificação de caracteres -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Configuração de compatibilidade com o Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração de visualização para dispositivos móveis -->
+    <link rel="stylesheet" href="reservaStyle.css"> <!-- Inclusão de um arquivo de estilo externo -->
+    <link rel="stylesheet" href="style.css"> <!-- Inclusão de um arquivo de estilo externo -->
+    <title>Reservas</title>
+</head>
+<body>
+
+    <!--inicio cabecario-->
+    <header>
+        <nav>
+            <ul>
+                <a class="menu" href="pagina2_Cardapio.html" target="_blank"> <li>Cardápio</li></a>
+                <a href="#contato"><li>Contato</li></a> <!-- Link para a seção de contato -->
+            </ul>
+        </nav>
+
+        <div class="logo">
+            <a id="tela-inicial" href="index.html">
+                <h1>Quiosque da Bia</h1> <!-- Título principal da página -->
+                <p>Seu destino para deliciosos lanches!</p> <!-- Descrição do cabeçalho -->
+            </a>
+        </div>
+    </header>
+    <!--fim cabecario-->
+
+    <section>
+        <h1>AGENDA</h1>
+        <form action="recebeDados.c" method="get">
+            Nome: <input type="text" name="variavelNome_C" id=""><br>
+            Data: <input type="date" name="variavelNome_C" id=""><br>
+            Horário:<input type="time" name="variavelNome_C" id=""><br>
+            E-mail: <input type="email" name="variavelNome_C" id=""><br>
+            Telefone: <input type="" name="variavelNome_C" id=""><br><br>
+
+            Evento especial: <br>
+            <input type="radio" value="aniversario" nome="eventoEspecial" id="">Aniversário<br>
+            <input type="radio" value="perdidoCasamento" nome="eventoEspecial" id="">Perdido de casamento<br>
+            <input type="radio" value="outro" nome="eventoEspecial" id="">Outro: <input type="text" nome="outro" id=""><br><br>
+
+            Ambiente:
+            <input type="checkbox" value="Terraço" nome="Mesa" id="">Terraço
+            <input type="checkbox" value="Externa" nome="Mesa" id="">Mesa Externa
+            <input type="checkbox" value="Interno" nome="Mesa" id="">Mesa Interno<br><br>
+
+            Unidade:<select nome="unidade" id="">
+                <option value="Taguatinga">Taguatinga</option>
+                <option value="AguasClaras">Águas Claras</option>
+                <option value="Taguatinga">Taguatinga</option>
+                <option selected value="unidade">Qualquer</option><br>
+
+            <input type="submit" value="Enviar">
+
+            Observação:<br>
+            <textarea nome="obs" id="" cols="30" rows="10"></textarea><br>
+            </select>
+        </form>
+    </section>
+
+    <!--inicio do aparte-->
+    <aside id="horario">
+        <!--HORÁRIO DE FUNCIONAMENTO-->
+        <div id="horarioF">
+            <h2>Horário de Funcionamento</h2> <!-- Título da seção de horário de funcionamento -->
+            <p>Segunda a Sexta: 10:00 - 20:00</p> <!-- Horário de funcionamento durante a semana -->
+            <p>Sábado e Domingo: 11:00 - 18:00</p> <!-- Horário de funcionamento nos fins de semana -->
+        </div>
+
+        <!--CONTATO-->
+        <div id="contato">
+                <img src="envelope.png" width="8%" height="8%">
+                <p>quiosquedabia@gmail.com</p>
+        </div>
+        <div id="contato">
+            <img src="phone.png" width="8%" height="8%">
+            <p>(61) 9 5555-5555</p>
+    </div>
+
+        <!--LOCALIZAÇÃO-->
+        <div id="localizacao">
+            <a href="https://maps.app.goo.gl/iBBfbPKJGq6kaHw88" target="_blank">
+                <div id="img-localiz">
+                    <img src="pin.png" width="13%" height="13%">
+                </div>
+                <div id="text-localiz">
+                    <h2>Localização</h2> <!-- Título da seção de localização -->
+                    <p>Estamos localizados na parada da 114, perto Euro.</p> <!-- Descrição da seção de localização -->
+                    <p>Endereço: Quadra 114 Área Especial</p> <!-- Endereço do quiosque -->
+                </div>
+            </a>
+        </div>
+    </aside>
+
+    <!--fim do aparte-->
+    <hr>
+
+    <!--inicio do rodape-->
+    <footer>
+        <div id="copy">
+            <p>&copy; 2023 Quiosque da Bia. Todos os direitos reservados.</p> <!-- Direitos autorais e ano -->
+        </div>
+        <div id="redes">
+            <a href="https://www.instagram.com/quiosqueda_bia/" target="_blank"><img src="instagram.png" width="5%" height="5%"></a>
+            <a href="https://www.facebook.com/people/Quiosque-da-Bia/61550022844877/" target="_blank"><img src="facebook.png" width="5%" height="5%"></a>
+            <a href="https://www.yelp.com.br/biz/quiosque-da-bia-bras%C3%ADlia" target="_blank"><img src="yelp.png" width="5%" height="5%"></a>
+            <a href="https://foursquare.com/v/quiosque-da-bia/64dbe099870ca663fe361619" target="_blank"><img src="fourSquare.png" width="5%" height="5%"></a>
+            <a href="" target="_blank"><img src="whatsapp.png" width="5%" height="5%"></a>
+        </div>
+    </footer>
+    <!--fim do rodape-->
+
+</body>
+</html>

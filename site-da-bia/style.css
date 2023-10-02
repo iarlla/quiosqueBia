@@ -1,4 +1,12 @@
 /*Estilo geral*/
+@font-face{
+    font-family: novaMooli;
+    src: url(font/Mooli-Regular.ttf);
+}
+@font-face{
+    font-family: novaCaveat;
+    src: url(font/Caveat-VariableFont_wght.ttf);
+}
 *{
     margin: 0;
 }
@@ -6,22 +14,20 @@
 body{
     width: 100%;
     height: 100vh;
-    /*background-image: linear-gradient(#456251, transparent);
-    background-image: url(coffee-break.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;*/
 }
 a{
     text-decoration: none;
 }
 
 /*----------------Estilo para o CABEÇALHO----------------*/
-header {
+header{
+    font-family: novaMooli;
+
     width: 100%;/* Define a largura como 100%*/
     height: 100vh;/* Define a altura como 80%*/
 
     /* Define a imagem de fundo como "coffee-break.jpg" */
-    background-image: url(coffee-break.jpg);
+    background-image: url(img/coffee-break.jpg);
     
     /* Evita que a imagem de fundo se repita */
     background-repeat: no-repeat;
@@ -36,8 +42,11 @@ header {
 }
 /* Estilo para a navegação */
 nav {
+    background-color: #456251; /* Cor para o cabeçalho */
+    color: wheat; /* Cor do texto no cabeçalho */
+
     width: 100%;
-    height: 10vh;
+    height: 15vh;
     display: flex;
     justify-content: end;
     align-items:center;
@@ -49,72 +58,321 @@ ul {
     justify-content: center;
     padding: 1;/*padding arrumou as letras no meio*/
 }
-/*.menu{}*/
+li{ 
+    list-style: none;/*tirar as bolinhas padrao na lista*/
+    padding: 20px;/*padding aumentar a area do texto para todos lados*/
+    font-size: 200%;
+}
+.menu{
+    color: wheat;
+    text-decoration: none;
+    border-radius: 20%;/*arredondar as bordas border*/
+}
 .menu:hover{/*para mudar a cor na area clicavel e dar cor quando passar o mouse*/
     border:2px solid wheat;
     font-size: 100%;
 }
 /*li{}*/
 
-.logo{
-    width: 100%;
-    height: 25vh;
-    font-size: 200%;
-    display: flex;
-    text-align: center;
-    justify-content: center;    
-} 
-/*#tela-inicial{}*/
-/*#tela-inicial:hover{}*/
-
+/*WELCOME*/
 .welcome{
     width: 100%;
-    height: 70vh;
+    height: 25vh;
+
+    background-image: linear-gradient(#456251, transparent);
+    font-size: 150%;  
+    color: wheat;
+    /* Contorno branco */
+    text-shadow: 
+        -1px -1px 0 #2f4538,  
+        1px -1px 0 #2f4538,
+        -1px 1px 0 #2f4538,
+        1px 1px 0 #2f4538;
+
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: start;
     justify-content: center;
-    padding: 30px;
+    align-items: flex-end;
 }
 
+/*QUIOSQUE DA BIA*/
+.logo{
+    background-image: linear-gradient(transparent, #281916);
+    color: #2f4538;
+    font-size: 400%;
+    /* Contorno branco */
+    text-shadow: 
+        -1px -1px 0 white,  
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+} 
+#tela-inicial{
+    text-decoration: none;
+    color: wheat;
+    /* Contorno branco */
+    text-shadow: 
+        -1px -1px 0 #2f4538,  
+        1px -1px 0 #2f4538,
+        -1px 1px 0 #2f4538,
+        1px 1px 0 #2f4538;
+}
+#tela-inicial:hover{/*para mudar a cor na area clicavel e dar cor quando passar o mouse*/
+    text-decoration: none;
+    color: #2f4538;
+    /* Contorno branco */
+    text-shadow: 
+        -1px -1px 0 white,  
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
 
 /*----------------Estilo para todos principal---------------- */
-/*main {}*/
-/*section id="brunch"*/
-.brunch{
+main {
+    font-family: novaMooli;
+}
+#sobre{
+    width: 100%;/* Define a largura como 100%*/
+    height: 100vh;/* Define a altura como 100%*/
+
+    background-image: url(img/comida-deliciosa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+
+    color: wheat;
+    text-shadow: 
+    -1px -1px 0 #281916,  
+    1px -1px 0 #281916,
+    -1px 1px 0 #281916,
+    1px 1px 0 #281916;
+}
+.text-sobre{
+    width: 100%;
+    height: 50vh;
+
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#281916,transparent);
+    /*background-image: linear-gradient(#281916, #422a25, transparent,transparent, pink, rgb(188, 225, 165));*/
+
+}
+#h2-sobre{
+    font-family: novaCaveat;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.form{
+    background-image: linear-gradient(transparent, rgb(188, 225, 165));
+    width: 100%;/* Define a largura como 100%*/
+    height: 50vh;/* Define a altura como 100%*/
+}
+form{
+    display: flex;
+    justify-content: center;
+
+    margin: 0 auto; /* Centralizar a div horizontalmente na página */
+    padding: 20px; /* Espaçamento interno da div */ 
+    width: 100%;
+    height: 40vh;
+
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
+}
+.campos{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+    font-size: 150%;
+}
+.campos_enviar{
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para o cabeçalho h1 dentro da div */
+.form h1 {
+    font-size: 200%; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para os campos de entrada de texto */
+.form input[type="text"],
+.form input[type="date"],
+.form input[type="time"],
+.form input[type="email"],
+.form input[type="tel"],
+.form textarea {
+    width: 100%; /* Largura total do elemento */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    padding: 10px; /* Espaçamento interno do elemento */
+    border: 1px solid #ccc; /* Borda do elemento */
+    border-radius: 4px; /* Arredondamento das bordas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra da div */
+}
+
+/* Estilo para os rótulos dos campos de entrada */
+.form label {
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo para os campos de entrada tipo radio e checkbox */
+.form input[type="radio"],
+.form input[type="checkbox"] {
+    margin-right: 5px; /* Espaçamento à direita dos elementos */
+}
+
+/* Estilo para o botão de envio */
+.form input[type="submit"] {
+    font-size: 110%;
+    background-color: #2f4538; /* Cor de fundo do botão */
+    color: wheat; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remover borda do botão */
+    border-radius: 4px; /* Arredondamento das bordas do botão */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    width: 10%;
+    height: 5vh;
+}
+
+/* Estilo para o menu suspenso (select) */
+.form select {
+    width: 100%; /* Largura total do elemento */
+    padding: 10px; /* Espaçamento interno do elemento */
+    border: 1px solid #ccc; /* Borda do elemento */
+    border-radius: 4px; /* Arredondamento das bordas */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estilo para a área de observação (textarea) */
+.form textarea {
+    width: 100%; /* Largura total do elemento */
+    padding: 10px; /* Espaçamento interno do elemento */
+    border: 1px solid #ccc; /* Borda do elemento */
+    border-radius: 4px; /* Arredondamento das bordas */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estilo para as opções do menu suspenso (select) */
+.form select option {
+    padding: 5px; /* Espaçamento interno das opções */
+}
+
+/*brunch*/
+#manha{
+    background-image: linear-gradient(rgb(188, 225, 165),rgb(245, 245, 111));
+    color: rgb(245, 245, 111);
+
+    justify-content: flex-start;
+}
+#meioDia{
+    background-image: linear-gradient(rgb(245, 245, 111), rgb(255, 176, 72));
+    color: rgb(255, 176, 72);
+
+    justify-content: flex-end;
+}
+#tarde{
+    background-image: linear-gradient(rgb(255, 176, 72),rgb(255, 81, 81));
+    color: rgb(255, 81, 81);
+
+    justify-content: flex-start;
+}
+#noite{
+    background-image: linear-gradient(rgb(255, 81, 81),antiquewhite);
+    color: antiquewhite;
+
+    justify-content: flex-end;
+
+}
+/*#orange{
+    background-image: linear-gradient(rgb(230, 143, 28),antiquewhite);
+}
+#white{
+    background-image: linear-gradient(antiquewhite, rgb(230, 143, 28));
+}*/
+.brunch{
+    background-image: linear-gradient(rgb(230, 143, 28),antiquewhite);
+
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
     width: 100%;
     height: 100vh;
 }
+
 .img-brunch{
-    width: 50%;
-    height: 100vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 40%;
+    height: 80vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25%;
+}
+.border-radius{
+    border-radius: 25%;
 }
 .text-brunch{
-    width: 50%;
+    margin-right: 5%;
+    width: 40%;
     height: 100vh;
+
+    margin: 3%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    text-shadow: 
+    -1px -1px 0 #2f4538,  
+    1px -1px 0 #2f4538,
+    -1px 1px 0 #2f4538,
+    1px 1px 0 #2f4538;
 }
-/*.h1-brunch{}*/
-/*.p-brunch{}*/
-#manha{
-    justify-content: flex-start;
-}
-#meioDia{
-    justify-content: flex-end;
-}
-#tarde{
-    justify-content: flex-start;
+.h1-brunch{
+    font-size: 60px;
+    font-family: novaCaveat;
 
 }
-#noite{
-    justify-content: flex-end;
+.p-brunch{
+    font-size: 40px;
+    font-family: novaMooli;
+}
+.cardapioDestaque{
+    /*background-image: linear-gradient(#2f4538, transparent, #2f4538);*/
+    font-size: 30px;
+    border-radius: 10%;
+    margin-top: 5%;
 }
 
 /*----------------Estilo para a seção adicional----------------*/
 aside {
+    background-image: url(img/comida-deliciosa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    color: wheat;
+    font-size: 20px;
+    font-family: novaMooli;
+
     width: 100%;
     height: 50vh;
 
@@ -123,30 +381,76 @@ aside {
     align-items: center; /*topo centro end*/
     text-align: center;
 }
-/*#horario{}
-#horarioF > h2{}
-#horarioF > p{}*/
+.pre_rodape{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(antiquewhite,transparent, #456251);
+
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; /*topo centro end*/
+    text-align: center;
+}
+#horarioF{
+    margin: 2%;
+}
 
 #contato{
+    font-size: 25px;
+    margin: 2%;
+
     display: flex;
     justify-content: space-evenly;
     align-items: center; /*topo centro end*/
     text-align: center;
     flex-direction: column;
 }
-
+#localizacao{
+    margin: 2%;
+}
 #localizacao > a{
     color: wheat;
 }
 /*#text-localiz{}
 #img-localiz{}*/
+iframe{
+    border-radius: 15%;
+    border: 10px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+iframe::before {
+    content: ""; /* Adicione conteúdo vazio para a pseudo-classe ::before */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 10px solid transparent;
+    border-image: linear-gradient(#2f4538, transparent);
+    border-image-slice: 1;
+    border-image-width: 10px;
+    border-image-outset: 0;
+    border-radius: 15%;
+}
 
 /*----------------Estilo para o rodapé----------------*/
 footer {
+    font-family: novaMooli;
+    background-color: #456251;
+    color: #f5deb3; /* Cor do texto no rodapé */ 
+
     width: 100%;
     height: 10vh;
     display: flex;
     align-items: center;
+}
+.footer{
+    margin: 2%;
+    display: flex;
+    align-items: center;
+
 }
 #copy{
     width: 50%;
@@ -156,4 +460,21 @@ footer {
     width: 50%;
     justify-content: space-between;
     gap: 50%;
+}
+hr{
+    border:1px solid wheat;
+}
+
+
+/*table*/
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+
+/*mobile*/
+@media screen end (max-width: 480px){
+    
 }

@@ -4,8 +4,9 @@
     <meta charset="UTF-8"> <!-- Configuração da codificação de caracteres -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Configuração de compatibilidade com o Internet Explorer -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração de visualização para dispositivos móveis -->
+    <link rel="stylesheet" href="reservaStyle.css"> <!-- Inclusão de um arquivo de estilo externo -->
     <link rel="stylesheet" href="style.css"> <!-- Inclusão de um arquivo de estilo externo -->
-    <link rel="stylesheet" href="font_color.css">
+    <link rel="icon" href="img/BAR & KITCHEN.png">
     <title>Quiosque da Bia</title> <!-- Título da página exibido na aba do navegador -->
 </head>
 <body>
@@ -18,34 +19,96 @@
                 <a class="menu" href="#contato"> <li>Contato</li></a>
             </ul>
         </nav>
+        <div class="welcome">
+            <h1>Bem-Vindos ao </h1>
+        </div>
         <div class="logo">
             <a id="tela-inicial" href="index.html">
                 <h1>Quiosque da Bia</h1> <!-- Título principal da página -->
                 <p>Seu destino para deliciosos lanches!</p> <!-- Descrição do cabeçalho -->
             </a>
         </div>
-        <div class="welcome">
-            <h1>Bem-Vindos ao Quiosque da Bia!</h1>
-            <h2>No dia 23 de abril de 2024, um sonho se tornará realidade.<br>
-                E esse sonho é o nosso compromisso de trazer aconchego e sabor à sua vida, de uma maneira simples, rápida e acessível.</h2>
-                <br>Sabemos o quanto o seu dia pode ser corrido, especialmente para os trabalhadores e estudantes que saem cedo de casa.<br>
-                 É por isso que estamos aqui, prontos para atender a todas as suas necessidades de refeição e refresco.</h2>
-                <br>No Quiosque da Bia, não é apenas sobre comida. É sobre criar momentos especiais, <br> 
-                proporcionando-lhe aquelas afeições importantes que tornam a vida mais doce. Estamos ansiosos para fazer parte do seu dia,<br> tornando-o mais saboroso e aconchegante. Junte-se a nós e celebre cada momento com um sorriso no rosto e um prato cheio de delícias.</h2>
-            <h2>Bem-vindo à nossa casa. <br>Bem-vindo ao Quiosque da Bia!</h2>
-        </div>
     </header>
     <!--fim cabecario-->
 
     <!--inicio do meio-->
     <main>
+        <section id="sobre">
+            <div class="text-sobre">
+                <h1>No dia 23 de abril de 2024, um sonho se tornará realidade.</h1>
+                <h2 id="h2-sobre">
+                    E esse sonho é o nosso compromisso de trazer aconchego e sabor à sua vida, de uma maneira simples, rápida e acessível.<br>
+                    Sabemos o quanto o seu dia pode ser corrido, especialmente para os trabalhadores e estudantes que saem cedo de casa.<br>
+                    É por isso que estamos aqui, prontos para atender a todas as suas necessidades de refeição e refresco.
+                    <br>No Quiosque da Bia, não é apenas sobre comida. É sobre criar momentos especiais, <br> 
+                    proporcionando-lhe aquelas afeições importantes que tornam a vida mais doce. Estamos ansiosos para fazer parte do seu dia,<br> 
+                    tornando-o mais saboroso e aconchegante. Junte-se a nós e celebre cada momento com um sorriso no rosto e um prato cheio de delícias.
+                </h2>
+                <h2>
+                    Bem-vindo à nossa casa.
+                </h2>
+            </div>
+            <div class="form">
+                <div><h1>AGENDA</h1></div>
+                <form action="recebeDados.c" method="get">
+                    <div class="campos">
+                        <div class="campos_cliente">
+                            Nome: <input type="text" name="variavelNome_C" id=""><br>
+                            Data: <input type="date" name="variavelNome_C" id=""><br>
+                            Horário:<input type="time" name="variavelNome_C" id=""><br>
+                            E-mail: <input type="email" name="variavelNome_C" id=""><br>
+                            Telefone: <input type="" name="variavelNome_C" id=""><br><br><br>
+                        </div>
+
+                        <div class="campos_mesa">
+
+                            Evento especial: <br>
+                            <input type="radio" value="aniversario" nome="eventoEspecial" id="">Aniversário<br>
+                            <input type="radio" value="perdidoCasamento" nome="eventoEspecial" id="">Perdido de casamento<br>
+                            <input type="radio" value="outro" nome="eventoEspecial" id="">Outro: <input type="text" nome="outro" id=""><br><br>
+
+                            Ambiente:
+                            <input type="checkbox" value="Terraço" nome="Mesa" id="">Terraço
+                            <input type="checkbox" value="Externa" nome="Mesa" id="">Mesa Externa
+                            <input type="checkbox" value="Interno" nome="Mesa" id="">Mesa Interno<br><br>
+ 
+                            Unidade:<select nome="unidade" id="">
+                                <option value="Taguatinga">Taguatinga</option>
+                                <option value="AguasClaras">Águas Claras</option>
+                                <option value="Taguatinga">Taguatinga</option>
+                                <option selected value="unidade">Qualquer</option><br>
+                            </select>  
+                        </div>
+
+                        <div class="campos_obs">
+                            Observação:<br>
+                            <textarea nome="obs" id="" cols="30" rows="10"></textarea><br>
+                        </div>
+                    </div>
+                    <div class="campos_enviar">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </section>
+
         <section class="brunch" id="manha">
             <div class="img-brunch">
-                <img src="quijo.jpg"width="100%" height="100%" alt="" srcset="">
+                <img src="img/quijo.jpg"width="100%" height="100%" alt="" srcset="" class="border-radius">
             </div>
             <div class="text-brunch">
                 <h1 class="h1-brunch">Café da manhã</h1>
-                <p class="p-brunch">Pela manhã, quando a fome começa a bater, oferecemos uma variedade de opções de café da manhã e lanches deliciosos que vão energizar o seu dia.</p>
+                <p class="p-brunch">Pela manhã, quando a fome começa a bater, oferecemos uma variedade de opções de café da manhã e lanches deliciosos que vão energizar o seu dia.
+
+                </p>
+                <p class="cardapioDestaque">
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                </p>
             </div>
         </section>
 
@@ -53,19 +116,35 @@
             <div class="text-brunch">
                 <h1 class="h1-brunch">Almoço</h1>
                 <p class="p-brunch">Na hora do almoço, proporcionamos uma pausa bem-vinda com refeições saborosas e nutritivas para recarregar suas energias.</p>
+                <p class="cardapioDestaque">
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                </p>
             </div>
             <div class="img-brunch">
-                <img src="almoco.jpg"width="100%" height="100%" alt="" srcset="">
+                <img src="img/almoco.jpg"width="100%" height="100%" alt="" srcset="" class="border-radius">
             </div>
         </section>
 
         <section class="brunch" id="tarde">
             <div class="img-brunch">
-                <img src="lanche.jpg"width="100%" height="100%" alt="" srcset="">
+                <img src="img/tarde.jpg"width="100%" height="100%" alt="" srcset="" class="border-radius">
             </div>
             <div class="text-brunch">
                 <h1 class="h1-brunch">Delícias da tarde</h1>
                 <p class="p-brunch">À tarde, quando a sede e a vontade de um lanche batem à porta, nossos açaís refrescantes e sorvetes irresistíveis estão prontos para te reconfortar.</p>
+                <p class="cardapioDestaque">
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                </p>
             </div>
         </section>
 
@@ -73,9 +152,17 @@
             <div class="text-brunch">
                 <h1 class="h1-brunch">Jantar</h1>
                 <p class="p-brunch">E após um longo dia de trabalho árduo, não há nada melhor do que uma jantinha saborosa para recarregar as energias e relaxar.</p>
+                <p class="cardapioDestaque">
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                    Torrada(pão, manteiga e oregano) - - - - - - 2,00<br>
+                </p>
             </div>
             <div class="img-brunch">
-                <img src="churrasquin.jpg"width="100%" height="100%" alt="" srcset="">
+                <img src="img/churrasquin.jpg"width="100%" height="100%" alt="" srcset="" class="border-radius">
             </div>
         </section>
         <!--<section class="brunch" id="orange"></section>-->
@@ -86,49 +173,53 @@
     <!--inicio do aparte-->
     <aside id="horario">
         <!--HORÁRIO DE FUNCIONAMENTO-->
-        <div id="horarioF">
-            <h2>Horário de Funcionamento</h2> <!-- Título da seção de horário de funcionamento -->
-            <p>Segunda a Sexta: 10:00 - 20:00</p> <!-- Horário de funcionamento durante a semana -->
-            <p>Sábado e Domingo: 11:00 - 18:00</p> <!-- Horário de funcionamento nos fins de semana -->
-        </div>
+        <div class="pre_rodape">
+            <!--LOCALIZAÇÃO-->
+            <div id="localizacao">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15347.025863426996!2d-48.1037264!3d-15.9218245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bd3845b9a6c93%3A0xc0fbf8c5a0127a2a!2sQuiosque%20da%20Bia!5e0!3m2!1spt-BR!2sbr!4v1695937174810!5m2!1spt-BR!2sbr" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div id="horarioF">
+                <h2>Horário de Funcionamento</h2> <!-- Título da seção de horário de funcionamento -->
+                <p>Segunda a Sexta: 10:00 - 20:00</p> <!-- Horário de funcionamento durante a semana -->
+                <p>Sábado e Domingo: 11:00 - 18:00</p> <!-- Horário de funcionamento nos fins de semana -->
+            </div>
 
-        <!--CONTATO-->
-        <div id="contato">
-                <img src="envelope.png" width="8%" height="8%">
-                <p>quiosquedabia@gmail.com</p>
-        </div>
-        <div id="contato">
-            <img src="phone.png" width="8%" height="8%">
-            <p>(61) 9 5555-5555</p>
-    </div>
+            <!--CONTATO-->
+            <div id="contato">
+                    <img src="img/envelope.png" width="8%" height="8%">
+                    <p>quiosquedabia@gmail.com</p>
+            </div>
 
-        <!--LOCALIZAÇÃO-->
-        <div id="localizacao">
-            <a href="https://maps.app.goo.gl/iBBfbPKJGq6kaHw88" target="_blank">
-                <div id="img-localiz">
-                    <img src="pin.png" width="13%" height="13%">
-                </div>
-                <div id="text-localiz">
-                    <h2>Localização</h2> <!-- Título da seção de localização -->
-                    <p>Estamos localizados na parada da 114, perto Euro.</p> <!-- Descrição da seção de localização -->
-                    <p>Endereço: Quadra 114 Área Especial</p> <!-- Endereço do quiosque -->
-                </div>
-            </a>
+            <div id="contato">
+                <img src="img/phone.png" width="8%" height="8%">
+                <p>(61) 9 5555-5555</p>
+            </div>
         </div>
     </aside>
     <!--fim do aparte-->
+
     <hr>
+
     <!--inicio do rodape-->
     <footer>
-        <div id="copy">
-            <p>&copy; 2023 Quiosque da Bia. Todos os direitos reservados.</p> <!-- Direitos autorais e ano -->
-        </div>
-        <div id="redes">
-            <a href="https://www.instagram.com/quiosqueda_bia/" target="_blank"><img src="instagram.png" width="5%" height="5%"></a>
-            <a href="https://www.facebook.com/people/Quiosque-da-Bia/61550022844877/" target="_blank"><img src="facebook.png" width="5%" height="5%"></a>
-            <a href="https://www.yelp.com.br/biz/quiosque-da-bia-bras%C3%ADlia" target="_blank"><img src="yelp.png" width="5%" height="5%"></a>
-            <a href="https://foursquare.com/v/quiosque-da-bia/64dbe099870ca663fe361619" target="_blank"><img src="fourSquare.png" width="5%" height="5%"></a>
-            <a href="" target="_blank"><img src="whatsapp.png" width="5%" height="5%"></a>
+        <div class="footer">
+            <div id="copy">
+                <p>&copy; 2023 Quiosque da Bia. Todos os direitos reservados.</p> <!-- Direitos autorais e ano -->
+            </div>
+            <div id="redes">
+                <a href="https://www.instagram.com/quiosqueda_bia/" target="_blank">
+                    <img src="img/instagram.png" width="5%" height="5%"></a>
+                <a href="https://www.facebook.com/people/Quiosque-da-Bia/61550022844877/" target="_blank">
+                    <img src="img/facebook.png" width="5%" height="5%"></a>
+                <a href="https://www.yelp.com.br/biz/quiosque-da-bia-bras%C3%ADlia" target="_blank">
+                    <img src="img/yelp.png" width="5%" height="5%"></a>
+                <a href="https://foursquare.com/v/quiosque-da-bia/64dbe099870ca663fe361619" target="_blank">
+                    <img src="img/fourSquare.png" width="5%" height="5%"></a>
+                <a href="" target="_blank">
+                    <img src="img/whatsapp.png" width="5%" height="5%">
+                </a>
+            </div>
         </div>
     </footer>
     <!--fim do rodape-->
